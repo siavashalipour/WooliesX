@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		7CBE5CBF251C7F3E004BA140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */; };
 		7CBE5CC2251C7F3E004BA140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */; };
 		7CBE5CCD251C7F3E004BA140 /* WooliesXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CCC251C7F3E004BA140 /* WooliesXTests.swift */; };
+		7CBE5CD8251C84F9004BA140 /* AbstractAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CD7251C84F9004BA140 /* AbstractAPIService.swift */; };
+		7CBE5CDA251C8990004BA140 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CD9251C8990004BA140 /* APIClient.swift */; };
+		7CBE5CDE251C9099004BA140 /* NiblessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CDD251C9099004BA140 /* NiblessViewController.swift */; };
+		7CBE5CE0251C90BC004BA140 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CDF251C90BC004BA140 /* MainViewModel.swift */; };
+		7CBE5CE2251CA29A004BA140 /* MainViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CE1251CA29A004BA140 /* MainViewTableViewCell.swift */; };
+		7CBE5CE4251CA357004BA140 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CE3251CA357004BA140 /* Extensions.swift */; };
 		8F2FB1DC2CFFF36DF6EF0D01 /* Pods_WooliesX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0517BA1B1CB7500856617F64 /* Pods_WooliesX.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +48,12 @@
 		7CBE5CC8251C7F3E004BA140 /* WooliesXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WooliesXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBE5CCC251C7F3E004BA140 /* WooliesXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooliesXTests.swift; sourceTree = "<group>"; };
 		7CBE5CCE251C7F3E004BA140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CBE5CD7251C84F9004BA140 /* AbstractAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractAPIService.swift; sourceTree = "<group>"; };
+		7CBE5CD9251C8990004BA140 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		7CBE5CDD251C9099004BA140 /* NiblessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiblessViewController.swift; sourceTree = "<group>"; };
+		7CBE5CDF251C90BC004BA140 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		7CBE5CE1251CA29A004BA140 /* MainViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewCell.swift; sourceTree = "<group>"; };
+		7CBE5CE3251CA357004BA140 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,12 @@
 			children = (
 				7CBE5CB5251C7F3C004BA140 /* AppDelegate.swift */,
 				7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */,
+				7CBE5CDF251C90BC004BA140 /* MainViewModel.swift */,
+				7CBE5CE1251CA29A004BA140 /* MainViewTableViewCell.swift */,
+				7CBE5CD7251C84F9004BA140 /* AbstractAPIService.swift */,
+				7CBE5CD9251C8990004BA140 /* APIClient.swift */,
+				7CBE5CDD251C9099004BA140 /* NiblessViewController.swift */,
+				7CBE5CE3251CA357004BA140 /* Extensions.swift */,
 				7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */,
 				7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */,
 				7CBE5CC3251C7F3E004BA140 /* Info.plist */,
@@ -113,7 +131,6 @@
 				47C85D7D0135A40A5D77158C /* Pods-WooliesXTests.debug.xcconfig */,
 				438D426A7052EE553535330B /* Pods-WooliesXTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,6 +154,7 @@
 				7CBE5CAE251C7F3C004BA140 /* Sources */,
 				7CBE5CAF251C7F3C004BA140 /* Frameworks */,
 				7CBE5CB0251C7F3C004BA140 /* Resources */,
+				3C8B04B9F8F85DA700F947FD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -247,6 +265,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3C8B04B9F8F85DA700F947FD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WooliesX/Pods-WooliesX-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WooliesX/Pods-WooliesX-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WooliesX/Pods-WooliesX-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5F888107727CD8430F3B0C30 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -294,7 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CBE5CBA251C7F3D004BA140 /* MainViewController.swift in Sources */,
+				7CBE5CD8251C84F9004BA140 /* AbstractAPIService.swift in Sources */,
+				7CBE5CDE251C9099004BA140 /* NiblessViewController.swift in Sources */,
+				7CBE5CE4251CA357004BA140 /* Extensions.swift in Sources */,
 				7CBE5CB6251C7F3C004BA140 /* AppDelegate.swift in Sources */,
+				7CBE5CE2251CA29A004BA140 /* MainViewTableViewCell.swift in Sources */,
+				7CBE5CDA251C8990004BA140 /* APIClient.swift in Sources */,
+				7CBE5CE0251C90BC004BA140 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
