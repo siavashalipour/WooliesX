@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		415E55DCE608704F681FDA3C /* Pods_WooliesXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31DD7C5275160D570242A917 /* Pods_WooliesXTests.framework */; };
+		7CBE5CB6251C7F3C004BA140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CB5251C7F3C004BA140 /* AppDelegate.swift */; };
+		7CBE5CBA251C7F3D004BA140 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */; };
+		7CBE5CBF251C7F3E004BA140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */; };
+		7CBE5CC2251C7F3E004BA140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */; };
+		7CBE5CCD251C7F3E004BA140 /* WooliesXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBE5CCC251C7F3E004BA140 /* WooliesXTests.swift */; };
+		8F2FB1DC2CFFF36DF6EF0D01 /* Pods_WooliesX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0517BA1B1CB7500856617F64 /* Pods_WooliesX.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7CBE5CC9251C7F3E004BA140 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7CBE5CAA251C7F3C004BA140 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7CBE5CB1251C7F3C004BA140;
+			remoteInfo = WooliesX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0517BA1B1CB7500856617F64 /* Pods_WooliesX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WooliesX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31DD7C5275160D570242A917 /* Pods_WooliesXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WooliesXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		438D426A7052EE553535330B /* Pods-WooliesXTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WooliesXTests.release.xcconfig"; path = "Target Support Files/Pods-WooliesXTests/Pods-WooliesXTests.release.xcconfig"; sourceTree = "<group>"; };
+		47C85D7D0135A40A5D77158C /* Pods-WooliesXTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WooliesXTests.debug.xcconfig"; path = "Target Support Files/Pods-WooliesXTests/Pods-WooliesXTests.debug.xcconfig"; sourceTree = "<group>"; };
+		523E3AE125F2C5A6FA66F3A2 /* Pods-WooliesX.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WooliesX.debug.xcconfig"; path = "Target Support Files/Pods-WooliesX/Pods-WooliesX.debug.xcconfig"; sourceTree = "<group>"; };
+		71FF2E0B8BAE38A81688E621 /* Pods-WooliesX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WooliesX.release.xcconfig"; path = "Target Support Files/Pods-WooliesX/Pods-WooliesX.release.xcconfig"; sourceTree = "<group>"; };
+		7CBE5CB2251C7F3C004BA140 /* WooliesX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WooliesX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBE5CB5251C7F3C004BA140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7CBE5CC1251C7F3E004BA140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7CBE5CC3251C7F3E004BA140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CBE5CC8251C7F3E004BA140 /* WooliesXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WooliesXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CBE5CCC251C7F3E004BA140 /* WooliesXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WooliesXTests.swift; sourceTree = "<group>"; };
+		7CBE5CCE251C7F3E004BA140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7CBE5CAF251C7F3C004BA140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F2FB1DC2CFFF36DF6EF0D01 /* Pods_WooliesX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CBE5CC5251C7F3E004BA140 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415E55DCE608704F681FDA3C /* Pods_WooliesXTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7CBE5CA9251C7F3C004BA140 = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CB4251C7F3C004BA140 /* WooliesX */,
+				7CBE5CCB251C7F3E004BA140 /* WooliesXTests */,
+				7CBE5CB3251C7F3C004BA140 /* Products */,
+				A161B9716A545535EEAC2313 /* Pods */,
+				D99FEDE86F147D2227FCE9CC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7CBE5CB3251C7F3C004BA140 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CB2251C7F3C004BA140 /* WooliesX.app */,
+				7CBE5CC8251C7F3E004BA140 /* WooliesXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7CBE5CB4251C7F3C004BA140 /* WooliesX */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CB5251C7F3C004BA140 /* AppDelegate.swift */,
+				7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */,
+				7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */,
+				7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */,
+				7CBE5CC3251C7F3E004BA140 /* Info.plist */,
+			);
+			path = WooliesX;
+			sourceTree = "<group>";
+		};
+		7CBE5CCB251C7F3E004BA140 /* WooliesXTests */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CCC251C7F3E004BA140 /* WooliesXTests.swift */,
+				7CBE5CCE251C7F3E004BA140 /* Info.plist */,
+			);
+			path = WooliesXTests;
+			sourceTree = "<group>";
+		};
+		A161B9716A545535EEAC2313 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				523E3AE125F2C5A6FA66F3A2 /* Pods-WooliesX.debug.xcconfig */,
+				71FF2E0B8BAE38A81688E621 /* Pods-WooliesX.release.xcconfig */,
+				47C85D7D0135A40A5D77158C /* Pods-WooliesXTests.debug.xcconfig */,
+				438D426A7052EE553535330B /* Pods-WooliesXTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D99FEDE86F147D2227FCE9CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0517BA1B1CB7500856617F64 /* Pods_WooliesX.framework */,
+				31DD7C5275160D570242A917 /* Pods_WooliesXTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7CBE5CB1251C7F3C004BA140 /* WooliesX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CBE5CD1251C7F3E004BA140 /* Build configuration list for PBXNativeTarget "WooliesX" */;
+			buildPhases = (
+				5F888107727CD8430F3B0C30 /* [CP] Check Pods Manifest.lock */,
+				7CBE5CAE251C7F3C004BA140 /* Sources */,
+				7CBE5CAF251C7F3C004BA140 /* Frameworks */,
+				7CBE5CB0251C7F3C004BA140 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WooliesX;
+			productName = WooliesX;
+			productReference = 7CBE5CB2251C7F3C004BA140 /* WooliesX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7CBE5CC7251C7F3E004BA140 /* WooliesXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CBE5CD4251C7F3E004BA140 /* Build configuration list for PBXNativeTarget "WooliesXTests" */;
+			buildPhases = (
+				10565E188CF63F47C7DFA3E7 /* [CP] Check Pods Manifest.lock */,
+				7CBE5CC4251C7F3E004BA140 /* Sources */,
+				7CBE5CC5251C7F3E004BA140 /* Frameworks */,
+				7CBE5CC6251C7F3E004BA140 /* Resources */,
+				FDE01473349786CB2EA8FAB1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7CBE5CCA251C7F3E004BA140 /* PBXTargetDependency */,
+			);
+			name = WooliesXTests;
+			productName = WooliesXTests;
+			productReference = 7CBE5CC8251C7F3E004BA140 /* WooliesXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7CBE5CAA251C7F3C004BA140 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = Siavash;
+				TargetAttributes = {
+					7CBE5CB1251C7F3C004BA140 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					7CBE5CC7251C7F3E004BA140 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 7CBE5CB1251C7F3C004BA140;
+					};
+				};
+			};
+			buildConfigurationList = 7CBE5CAD251C7F3C004BA140 /* Build configuration list for PBXProject "WooliesX" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7CBE5CA9251C7F3C004BA140;
+			productRefGroup = 7CBE5CB3251C7F3C004BA140 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7CBE5CB1251C7F3C004BA140 /* WooliesX */,
+				7CBE5CC7251C7F3E004BA140 /* WooliesXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7CBE5CB0251C7F3C004BA140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CBE5CC2251C7F3E004BA140 /* LaunchScreen.storyboard in Resources */,
+				7CBE5CBF251C7F3E004BA140 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CBE5CC6251C7F3E004BA140 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10565E188CF63F47C7DFA3E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WooliesXTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F888107727CD8430F3B0C30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WooliesX-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDE01473349786CB2EA8FAB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WooliesXTests/Pods-WooliesXTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WooliesXTests/Pods-WooliesXTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WooliesXTests/Pods-WooliesXTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7CBE5CAE251C7F3C004BA140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CBE5CBA251C7F3D004BA140 /* MainViewController.swift in Sources */,
+				7CBE5CB6251C7F3C004BA140 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7CBE5CC4251C7F3E004BA140 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7CBE5CCD251C7F3E004BA140 /* WooliesXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7CBE5CCA251C7F3E004BA140 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7CBE5CB1251C7F3C004BA140 /* WooliesX */;
+			targetProxy = 7CBE5CC9251C7F3E004BA140 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CBE5CC1251C7F3E004BA140 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7CBE5CCF251C7F3E004BA140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7CBE5CD0251C7F3E004BA140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7CBE5CD2251C7F3E004BA140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523E3AE125F2C5A6FA66F3A2 /* Pods-WooliesX.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33GWFDB497;
+				INFOPLIST_FILE = WooliesX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.WooliesX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CBE5CD3251C7F3E004BA140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71FF2E0B8BAE38A81688E621 /* Pods-WooliesX.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33GWFDB497;
+				INFOPLIST_FILE = WooliesX/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.WooliesX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7CBE5CD5251C7F3E004BA140 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47C85D7D0135A40A5D77158C /* Pods-WooliesXTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33GWFDB497;
+				INFOPLIST_FILE = WooliesXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.WooliesXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WooliesX.app/WooliesX";
+			};
+			name = Debug;
+		};
+		7CBE5CD6251C7F3E004BA140 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438D426A7052EE553535330B /* Pods-WooliesXTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 33GWFDB497;
+				INFOPLIST_FILE = WooliesXTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.siavash.WooliesXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WooliesX.app/WooliesX";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7CBE5CAD251C7F3C004BA140 /* Build configuration list for PBXProject "WooliesX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CBE5CCF251C7F3E004BA140 /* Debug */,
+				7CBE5CD0251C7F3E004BA140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CBE5CD1251C7F3E004BA140 /* Build configuration list for PBXNativeTarget "WooliesX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CBE5CD2251C7F3E004BA140 /* Debug */,
+				7CBE5CD3251C7F3E004BA140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CBE5CD4251C7F3E004BA140 /* Build configuration list for PBXNativeTarget "WooliesXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CBE5CD5251C7F3E004BA140 /* Debug */,
+				7CBE5CD6251C7F3E004BA140 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7CBE5CAA251C7F3C004BA140 /* Project object */;
+}
