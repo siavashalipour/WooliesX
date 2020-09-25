@@ -13,18 +13,27 @@ import Alamofire
 
 final class MainViewModel {
     
+    // outputs Driver
     var reloadTableView: Driver<ModelResult<Bool>> { return relaodRelay.asDriver() }
+    var isAscending: Driver<Bool?> { return isAscendingRelay.asDriver() }
     
+    // Internal relays
     private let relaodRelay = BehaviorRelay<ModelResult<Bool>>(value: .result(false))
-    private var isAscending: Bool = false
+    private let isAscendingRelay = BehaviorRelay<Bool?>(value: nil)
+    
     private let disposeBag = DisposeBag()
     private var response: [ApiResponse] = []
     
     init() {
+        fetchData()
+    }
+    
+    func fetchData() {
+        isAscendingRelay.accept(nil)
+        
         MainApiService.shared.getData().subscribe(onNext: { [weak self] (responses) in
             guard let weakself = self else { return }
-            // making sure data we shows have lifeSpans because we want to sort
-            // by this
+            // making sure data we show have lifeSpans because we want to sort based on lifeSpan
             let filtered = responses.filter({
                 $0.breeds?.first?.lifeSpan != nil
             })
@@ -37,18 +46,26 @@ final class MainViewModel {
         }).disposed(by: disposeBag)
     }
     
-    // very simple sort - it is just based on string comparison
-    // not necessary sort based on the age numbers.
+    func compare(first: String, second: String, isAscending: Bool) -> Bool {
+        if isAscending {
+            return first.maxLifeSpan < second.maxLifeSpan
+        } else {
+            return first.maxLifeSpan > second.maxLifeSpan
+        }
+    }
+    
+    // This sorts based on the max life span
     @objc
     func sort() {
-        isAscending = !isAscending
+        // toggel
+        let isAscending = isAscendingRelay.value ?? false
+        isAscendingRelay.accept(!isAscending)
+        
         response.sort { (a, b) -> Bool in
-            guard let aLifeSpan = a.breeds?.first?.lifeSpan, let bLifeSpan = b.breeds?.first?.lifeSpan else { return false }
-            if isAscending {
-                return aLifeSpan.compare(bLifeSpan) == .orderedAscending
-            } else {
-                return aLifeSpan.compare(bLifeSpan) == .orderedDescending
-            }
+            guard let aLifeSpan = a.breeds?.first?.lifeSpan,
+                let bLifeSpan = b.breeds?.first?.lifeSpan else { return false }
+            
+            return compare(first: aLifeSpan, second: bLifeSpan, isAscending: !isAscending)
         }
         relaodRelay.accept(.result(true))
     }
@@ -63,7 +80,7 @@ final class MainViewModel {
     }
 }
 
-// make this internal so just the ViewModel have access to it
+// make this fileprivate so just the ViewModel have access to it
 fileprivate class MainApiService: AbstractAPIService {
     static let shared = MainApiService()
     

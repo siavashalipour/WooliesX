@@ -33,10 +33,15 @@ class MainViewController: NiblessViewController {
         let btn = UIButton()
         btn.backgroundColor = .blue
         btn.layer.cornerRadius = 8
-        btn.setTitle("Sort", for: .normal)
         btn.setTitleColor(.white, for: .normal)
         btn.addTarget(self.viewModel, action: #selector(MainViewModel.sort), for: .touchUpInside)
         return btn
+    }()
+    
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .black
+        return refreshControl
     }()
     
     init(with viewModel: MainViewModel) {
@@ -51,12 +56,34 @@ class MainViewController: NiblessViewController {
             case .result(let shouldReload):
                 if shouldReload {
                     weakself.tableView.reloadData()
+                    weakself.refreshControl.endRefreshing()
                 }
             case .error(let error):
-                // show an error like alert view
-                print("!!!! \(error.localizedDescription)")
+                weakself.showAlert(for: error)
+                weakself.refreshControl.endRefreshing()
             }
         }).disposed(by: disposeBag)
+        
+        viewModel.isAscending.drive(onNext: { [weak self] (maybeIsAscending) in
+            guard let weakself = self else { return }
+            if let isAscending = maybeIsAscending {
+                weakself.sortButton.setTitle(isAscending ? "Ascending" : "Descending", for: .normal)
+            } else {
+                weakself.sortButton.setTitle("Not Sorted", for: .normal)
+            }
+        }).disposed(by: disposeBag)
+        
+        refreshControl.rx.controlEvent(.valueChanged).subscribe(onNext: { [weak self] _ in
+            guard let weakself = self else { return }
+            weakself.viewModel.fetchData()
+        }).disposed(by: disposeBag)
+    }
+   
+    private func showAlert(for error: Error) {
+        let alertControl = UIAlertController(title: "Something Went wrong", message: error.localizedDescription, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Okay", style: .cancel, handler: nil)
+        alertControl.addAction(cancelAction)
+        present(alertControl, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -77,6 +104,8 @@ class MainViewController: NiblessViewController {
             make.top.equalTo(sortButton.snp.bottom).offset(2)
             make.left.right.bottom.equalToSuperview()
         }
+        
+        tableView.refreshControl = refreshControl
     }
 }
 

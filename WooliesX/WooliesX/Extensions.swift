@@ -15,3 +15,18 @@ extension UITableView {
         return cell
     }
 }
+extension String {
+    
+    var maxLifeSpan: Int {
+        // split string into substrings that only contain numbers
+        let substrings = self.components(separatedBy: CharacterSet.decimalDigits.inverted)
+
+        let numbers = substrings.compactMap {
+          // convert each substring into an Int?
+          return Int($0)
+        }
+        
+        return numbers.last ?? 0
+    }
+}
+

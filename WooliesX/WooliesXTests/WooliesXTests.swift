@@ -11,6 +11,8 @@ import XCTest
 
 class WooliesXTests: XCTestCase {
 
+    private let vm = MainViewModel()
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -19,9 +21,19 @@ class WooliesXTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
+    func testSorting() throws {
         // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Use XCTAssert and related functions to verify your tests produce the correct results
+        
+        // test descending
+        let mockDataA = "10 -23 years!"
+        let mockDataB = "4 - years !"
+        let result1 = vm.compare(first: mockDataA, second: mockDataB, isAscending: false)
+        XCTAssertTrue(result1, "\(mockDataA) is bigger than \(mockDataB)")
+        
+        // test ascending
+        let result2 = vm.compare(first: mockDataB, second: mockDataA, isAscending: true)
+        XCTAssertTrue(result2, "\(mockDataB) is smaller than \(mockDataA)")
     }
 
     func testPerformanceExample() throws {
