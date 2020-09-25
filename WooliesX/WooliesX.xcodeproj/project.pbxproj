@@ -100,13 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				7CBE5CB5251C7F3C004BA140 /* AppDelegate.swift */,
-				7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */,
-				7CBE5CDF251C90BC004BA140 /* MainViewModel.swift */,
-				7CBE5CE1251CA29A004BA140 /* MainViewTableViewCell.swift */,
-				7CBE5CD7251C84F9004BA140 /* AbstractAPIService.swift */,
-				7CBE5CD9251C8990004BA140 /* APIClient.swift */,
-				7CBE5CDD251C9099004BA140 /* NiblessViewController.swift */,
-				7CBE5CE3251CA357004BA140 /* Extensions.swift */,
+				7CBE5CE7251DB627004BA140 /* MainVC */,
+				7CBE5CE5251DB609004BA140 /* NetworkLayer */,
+				7CBE5CE6251DB616004BA140 /* Common */,
 				7CBE5CBE251C7F3E004BA140 /* Assets.xcassets */,
 				7CBE5CC0251C7F3E004BA140 /* LaunchScreen.storyboard */,
 				7CBE5CC3251C7F3E004BA140 /* Info.plist */,
@@ -121,6 +117,34 @@
 				7CBE5CCE251C7F3E004BA140 /* Info.plist */,
 			);
 			path = WooliesXTests;
+			sourceTree = "<group>";
+		};
+		7CBE5CE5251DB609004BA140 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CD7251C84F9004BA140 /* AbstractAPIService.swift */,
+				7CBE5CD9251C8990004BA140 /* APIClient.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		7CBE5CE6251DB616004BA140 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CDD251C9099004BA140 /* NiblessViewController.swift */,
+				7CBE5CE3251CA357004BA140 /* Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7CBE5CE7251DB627004BA140 /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				7CBE5CB9251C7F3C004BA140 /* MainViewController.swift */,
+				7CBE5CDF251C90BC004BA140 /* MainViewModel.swift */,
+				7CBE5CE1251CA29A004BA140 /* MainViewTableViewCell.swift */,
+			);
+			path = MainVC;
 			sourceTree = "<group>";
 		};
 		A161B9716A545535EEAC2313 /* Pods */ = {
