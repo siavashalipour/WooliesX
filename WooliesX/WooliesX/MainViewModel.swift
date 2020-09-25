@@ -14,11 +14,11 @@ import Alamofire
 final class MainViewModel {
     
     // outputs Driver
-    var reloadTableView: Driver<ModelResult<Bool>> { return relaodRelay.asDriver() }
+    var reloadTableView: Driver<ModelResult<Bool>> { return relaodTableViewRelay.asDriver() }
     var isAscending: Driver<Bool?> { return isAscendingRelay.asDriver() }
     
     // Internal relays
-    private let relaodRelay = BehaviorRelay<ModelResult<Bool>>(value: .result(false))
+    private let relaodTableViewRelay = BehaviorRelay<ModelResult<Bool>>(value: .result(false))
     private let isAscendingRelay = BehaviorRelay<Bool?>(value: nil)
     
     private let disposeBag = DisposeBag()
@@ -38,11 +38,11 @@ final class MainViewModel {
                 $0.breeds?.first?.lifeSpan != nil
             })
             weakself.response = filtered
-            weakself.relaodRelay.accept(.result(true))
+            weakself.relaodTableViewRelay.accept(.result(true))
         }, onError: { [weak self] (error) in
             guard let weakself = self else { return }
             weakself.response = []
-            weakself.relaodRelay.accept(.error(error))
+            weakself.relaodTableViewRelay.accept(.error(error))
         }).disposed(by: disposeBag)
     }
     
@@ -67,7 +67,7 @@ final class MainViewModel {
             
             return compare(first: aLifeSpan, second: bLifeSpan, isAscending: !isAscending)
         }
-        relaodRelay.accept(.result(true))
+        relaodTableViewRelay.accept(.result(true))
     }
     
     func numberOfItems() -> Int {
